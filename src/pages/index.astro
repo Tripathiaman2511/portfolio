@@ -1,0 +1,46 @@
+---
+import ProjectComponent from '../components/ProjectComponent';
+import Layout from '../layouts/Layout.astro'
+import ContactPage from '../components/ContactPage'
+import WorkCard from '../components/WorkCard';
+
+---
+<Layout>
+   
+    <div id="home" class="text-[4.5vw] -mt-[8vh]  h-[100vh]   font-Pop  ">   
+        <h1 class="w-[48vw] leading-none pt-[35vh] ml-[4vw]">Hi, I am <span class="text-[#3864FF]">Aman Tripathi,</span>
+            A Software Developer.</h1>
+        <p class="text-[#00000099] mt-[5vh] text-[2vw] w-[70vw] ml-[4vw]">I am a Software Developer with a passion for building innovative applications that push the boundaries of what's possible.”</p>    
+        <button class="text-[2vw] py-[1vh] px-[2vw] w-[24vw] mt-[7vh] bg-[#EB3737] hover:bg-indigo-500 transition-all duration-300 text-white rounded-[2vh] ml-[4vw]">Download Resume</button>      
+    </div>
+
+    <div id="work-history" class="h-[100vh] pt-[10vh] font-Pop">
+        <h1 class="font-Pop text-[2.5vw] text-slate-900  ml-[4vw] ">WORK HISTORY</h1>
+        <span class="absolute w-[45vw] mx-[4vw]    bg-gradient-to-r from-indigo-500 to-white   py-[0.2vh]"></span>
+        
+            
+
+                <WorkCard client:visible/>
+
+        
+    </div>
+
+    <div id="project" class="text-[1.5vw] h-[100vh] pt-[10vh] font-Pop">
+        <h1 class="font-Pop text-[2.5vw] text-slate-900  ml-[4vw] ">Projects</h1>
+
+        <span class="absolute w-[45vw] mx-[4vw]    bg-gradient-to-r from-indigo-500 to-white   py-[0.2vh]"></span>
+        <div class="mt-[1vh] w-[90vw] mx-auto">
+            <ProjectComponent client:visible/>
+        </div>
+    </div>
+    <div id="contact" class="text-[1.5vw] h-[100vh] pt-[10vh] font-Pop">
+        <h1 class="font-Pop text-[2.5vw] text-slate-900  ml-[4vw] ">Contacts</h1>
+        <span class="absolute w-[45vw] mx-[4vw]    bg-gradient-to-r from-indigo-500 to-white   py-[0.2vh]"></span>
+        
+            <ContactPage client:visible/>
+        
+
+    </div>
+
+    
+</Layout>
