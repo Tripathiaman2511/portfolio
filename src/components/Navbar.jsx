@@ -1,4 +1,4 @@
-import React from 'react'
+
 import useScrollPosition from '../hooks/useScrollPosition'
 
 function Navbar() {
@@ -10,15 +10,17 @@ function Navbar() {
 
   return (
    <>
-   <nav className={`text-[1.5rem]  top-0 sticky z-10 transition-all duration-300 ease-in-out  ${scrollPosition>0?'text-white  bg-slate-900 ':''}`}> 
-    
-    <ul className=" flex flex-row py-[1vh] justify-end mr-[2vw]">
-        <li className="my-[0.5vh]" ><a className="mx-[1vw]  px-[1.5vw] py-[1vh] hover:text-indigo-300 transition-all ease-in-out duration-400 hover:animate-pulse " href="#home">Home</a></li>
-        <li className="my-[0.5vh]" ><a className="mx-[1vw]   px-[1.5vw] py-[1vh] hover:text-indigo-300 transition-all ease-in-out duration-400 hover:animate-pulse " href="#work-history">Work</a></li>
-        <li className="my-[0.5vh]" ><a className="mx-[1vw]  px-[1.5vw] py-[1vh] hover:text-indigo-300 transition-all ease-in-out duration-400 hover:animate-pulse " href="#project">Project</a></li>
-        <li className="my-[0.5vh]" ><a className="mx-[1vw]  px-[1.5vw] py-[1vh] hover:text-indigo-300 transition-all ease-in-out duration-400 hover:animate-pulse " href="#contact">Contact</a></li>
-    </ul>
-</nav>
+   
+    <div className='font-inter flex flex-row py-[1vh] xl:text-[1vw] items-center lg:text-[2vw] text-[3vw] justify-between' >
+        <h1 className='font-Right mx-[1vw] py-[0.5vh] px-[4vw] xl:text-[1.5vw] text-[5vw] '>AMAN</h1>
+        {/* <div className='hidden md:flex md:flex-row'>
+        <a className='mx-[0.5vw] py-[0.5vh] '  href="#home">Work</a>
+        <a className='mx-[0.5vw] py-[0.5vh]  ' href="#contact">Project</a>
+        </div> */}
+        <a href='mailto: iamtripathi.25@gmail.com' className=' mr-[4vw]  underline underline-offset-8'>iamtripathi.25@gmail.com</a>
+    </div>
+
+
    </>
   )
 }

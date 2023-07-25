@@ -4,8 +4,12 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily:{
-				'Comfortaa':['Comfortaa', 'cursive'],
-				'Pop':['Poppins', 'sans-serif']
+				
+				'Pop':['Poppins', 'sans-serif'],
+				
+				
+				'Right':['Righteous', 'cursive'],
+				'Inter':['Inter', 'sans-serif']
 			}
 		},
 	},
