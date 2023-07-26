@@ -14,7 +14,7 @@ function ProjectComponent() {
   return (
     <>
     
-    <div className=' grid md:grid-cols-3 lg:grid-cols-3 grid-cols-2 grid-flow-row mx-[10vw] gap-5 '>
+    <div className=' grid  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 grid-flow-row mx-[10vw] gap-5 '>
     {ProjectData.map((value,key)=>{
       return(<Fragment key={key}><ProjectCard type={value.type} projectName={value.projectName} date={value.date} link={value.githubLink}/></Fragment>)
     })}

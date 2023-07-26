@@ -8,7 +8,7 @@ function WorkCard() {
   const scrollRef=useRef(null)
   return (
 <>
-<div class=" mx-[1vw] font-Inter mt-[15vh] xl:text-[1.2vw] text-[4vw]">
+<div class=" mx-[1vw] font-Inter mt-[20vh] xl:text-[1.2vw] lg:text-[2vw] md:text-[2.5vw] text-[4vw]">
   <div className='overflow-hidden '>
   <motion.div initial={{ y: '100%' }}   animate={{  y: 0 }} transition={{ duration: 0.6,delay:2.2 }} class=" flex flex-row justify-between px-[5vw]">
             <div class="flex flex-row ">
@@ -18,26 +18,26 @@ function WorkCard() {
             <h1 >(Discover)</h1>
         </motion.div>
         </div>
-        <div className='overflow-hidden mt-[2vh]'>
-        <motion.span  initial={{opacity :0 }}   animate={{  opacity:1 }} transition={{ duration: 0.6,delay:2.2 }} class="block h-[0.2vh] mx-[4vw] lg:mb-[10vh] mb-[5vh]  bg-slate-600 rounded-full"></motion.span>
+        <div className='overflow-hidden mt-[1vh] mb-[2vh]'>
+        <motion.span  initial={{opacity :0 }}   animate={{  opacity:1 }} transition={{ duration: 0.6,delay:2.2 }} class="block h-[0.2vh] mx-[4vw]  bg-slate-600 rounded-full"></motion.span>
 
         </div>
   
-      
-        {
+   <motion.div initial={{opacity:0,y:100}} animate={{opacity:1,y:0}} transition={{ duration: 0.6,delay:2.2 }} >
+   {
       WorkData.map((value,key)=>{
       
         return(
           <Fragment key={key}>
           
-          <motion.div  className='font-Inter font-semibold lg:text-[1vw] text-[4vw]  flex flex-row justify-between lg:px-[4vw] px-[5vw] mt-[1vh]  lg:w-[80vw] '>
-            <h1>{value.company}</h1>
-            <h2 >{value.position}</h2>
+          <motion.div  className='font-Inter font-semibold xl:text-[1.5vw] lg:text-[2vw] md:text-[2.7vw] text-[5vw]  flex flex-row justify-between lg:px-[4vw] px-[5vw]   lg:w-[80vw] '>
+            <h1 className='leading-[3vh]'>{value.company}</h1>
+            <h2 className='leading-[3vh]'>{value.position}</h2>
             <h2 className='hidden lg:block'>{value.date}</h2>
           </motion.div>
-          <div className='font-Inter lg:text-[1vw] text-[3vw] flex flex-row  mx-[4vw] justify-between mt-[5vh] lg:mb-[20vh] mb-[10vh]   px-[3vw] w-[80vw] '>
+          <div className='font-Inter xl:text-[1vw] lg:text-[1.5vw] md:text-[2vw] text-[3vw] flex flex-row  mx-[4vw] justify-between mt-[5vh] lg:mb-[15vh] mb-[10vh]   px-[3vw] md:w-[80vw] '>
             <h1>{`(00${key+1})`}</h1>
-            <p className=' font-bold text-[1.7vw] w-[45vw] leading-[2.8vw] tracking-tight '>{value.smallDesc}</p>
+            <p className=' font-bold text-[3.5vw] md:text-[2.5vw] lg:text-[1.6vw] xl:text-[1.2vw] xl:leading-[4vh] md:w-[50vw] w-[60vw] lg:w-[45vw] lg:leading-[2.8vw] tracking-tight '>{value.smallDesc}</p>
           </div>
 
          
@@ -46,6 +46,9 @@ function WorkCard() {
         )
       })
     }
+    
+    </motion.div>   
+
    
 
         
