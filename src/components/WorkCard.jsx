@@ -8,18 +8,18 @@ function WorkCard() {
   const scrollRef=useRef(null)
   return (
 <>
-<div class=" mx-[1vw] font-Inter mt-[20vh] xl:text-[1.2vw] lg:text-[2vw] md:text-[2.5vw] text-[4vw]">
+<div className=" mx-[1vw] font-Inter mt-[25vh] xl:text-[1.2vw] lg:text-[2vw] md:text-[2.5vw] text-[4vw]">
   <div className='overflow-hidden '>
-  <motion.div initial={{ y: '100%' }}   animate={{  y: 0 }} transition={{ duration: 0.6,delay:2.2 }} class=" flex flex-row justify-between px-[5vw]">
-            <div class="flex flex-row ">
+  <motion.div initial={{ y: '100%' }}   animate={{  y: 0 }} transition={{ duration: 0.6,delay:2.2 }} className=" flex flex-row justify-between px-[5vw]">
+            <div className="flex flex-row ">
                 <h1 >Selected Work </h1>
-                <img class="lg:w-[1vw] w-[3vw] ml-[1vw]" src={downKey} alt=""/>
+                <img className="lg:w-[1vw] w-[3vw] ml-[1vw]" src={downKey} alt=""/>
             </div>
             <h1 >(Discover)</h1>
         </motion.div>
         </div>
         <div className='overflow-hidden mt-[1vh] mb-[2vh]'>
-        <motion.span  initial={{opacity :0 }}   animate={{  opacity:1 }} transition={{ duration: 0.6,delay:2.2 }} class="block h-[0.2vh] mx-[4vw]  bg-slate-600 rounded-full"></motion.span>
+        <motion.span  initial={{opacity :0 }}   animate={{  opacity:1 }} transition={{ duration: 0.6,delay:2.2 }} className="block h-[0.2vh] mx-[4vw]  bg-slate-600 rounded-full"></motion.span>
 
         </div>
   
