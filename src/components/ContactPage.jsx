@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
+
 import { useScroll,useTransform } from 'framer-motion'
 import searchUp from '../images/SearchDown.svg'
 
