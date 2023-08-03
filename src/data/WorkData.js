@@ -17,7 +17,7 @@ export const WorkData=[
     {
         'position':'Frontend Developer',
         'company':'Hackathon: Error-404 0.5',
-        'smallDesc':'2 Days and 1 Night long hackathon organized by M.H. Saboo Siddik College of Engineering. The task was to develop a Decentraized Doctor Consultation WebApp using Blockchain. My task was to develop a React Frontend for Blockchain Application which shows both Patients and Doctors Profile based on their meta wallet id. Based on the API created by team, I developed  related function which helps user to interact with it.',
+        'smallDesc':'2 Days and 1 Night long hackathon organized by M.H. Saboo Siddik College of Engineering. The task was to develop a Decentraized Doctor Consultation WebApp using Blockchain.',
         'date':'MARCH 2023',
         'image':'abstractTecture.svg'
     

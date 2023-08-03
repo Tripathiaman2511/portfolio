@@ -1,44 +1,45 @@
-import React, { Fragment, useState, useRef } from 'react'
+import { Fragment } from 'react'
 import { WorkData } from '../data/WorkData'
 import {motion} from 'framer-motion'
 import downKey from '../images/SearchDown.svg'
 
 
 function WorkCard() {
-  const scrollRef=useRef(null)
+  
   return (
 <>
-<div className=" mx-[1vw] font-Inter mt-[25vh] xl:text-[1.2vw] lg:text-[2vw] md:text-[2.5vw] text-[4vw]">
-  <div className='overflow-hidden '>
-  <motion.div initial={{ y: '100%' }}   animate={{  y: 0 }} transition={{ duration: 0.6,delay:2.2 }} className=" flex flex-row justify-between px-[5vw]">
-            <div className="flex flex-row ">
+<div className=" mx-[1vw] mt-[25vh]">
+  <div className='overflow-hidden font-Inter text-[3vw] sm:text-[2.4vw] md:text-[2vw] lg:text-[1.4vw]  mx-[4vw]'>
+    <motion.div initial={{ y: '100%' }} whileInView={{ y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className=" flex flex-row justify-between">
+            <div className="basis-1/2 flex flex-row ">
                 <h1 >Selected Work </h1>
-                <img className="lg:w-[1vw] w-[3vw] ml-[1vw]" src={downKey} alt=""/>
+                <img className="w-[3vw] sm:w-[1.5vw] lg:w-[1vw]  ml-[1vw]  lg:ml-[0.5vw]" src={downKey} alt=""/>
             </div>
-            <h1 >(Discover)</h1>
-        </motion.div>
-        </div>
-        <div className='overflow-hidden mt-[1vh] mb-[2vh]'>
-        <motion.span  initial={{opacity :0 }}   animate={{  opacity:1 }} transition={{ duration: 0.6,delay:2.2 }} className="block h-[0.2vh] mx-[4vw]  bg-slate-600 rounded-full"></motion.span>
-
-        </div>
+            <h1 className=''>( Discover )</h1>
+    </motion.div>
+  </div>
+  <div className='overflow-hidden mt-[1vh] mb-[2vh]'>
+    <motion.span  initial={{opacity :0 }}   whileInView={{  opacity:1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="block h-[0.1vh] mx-[4vw]  bg-slate-600 rounded-full"></motion.span>
+  </div>
   
-   <motion.div initial={{opacity:0,y:100}} animate={{opacity:1,y:0}} transition={{ duration: 0.6,delay:2.2 }} >
    {
       WorkData.map((value,key)=>{
       
         return(
-          <Fragment key={key}>
           
-          <motion.div  className='font-Inter font-semibold xl:text-[1.5vw] lg:text-[2vw] md:text-[2.7vw] text-[5vw]  flex flex-row justify-between lg:px-[4vw] px-[5vw]   lg:w-[80vw] '>
-            <h1 className='leading-[3vh]'>{value.company}</h1>
-            <h2 className='leading-[3vh]'>{value.position}</h2>
-            <h2 className='hidden lg:block'>{value.date}</h2>
-          </motion.div>
-          <div className='font-Inter xl:text-[1vw] lg:text-[1.5vw] md:text-[2vw] text-[3vw] flex flex-row  mx-[4vw] justify-between mt-[5vh] lg:mb-[15vh] mb-[10vh]   px-[3vw] md:w-[80vw] '>
-            <h1>{`(00${key+1})`}</h1>
-            <p className=' font-bold text-[3.5vw] md:text-[2.5vw] lg:text-[1.6vw] xl:text-[1.2vw] xl:leading-[4vh] md:w-[50vw] w-[60vw] lg:w-[45vw] lg:leading-[2.8vw] tracking-tight '>{value.smallDesc}</p>
+          <Fragment key={key}>
+          <motion.div whileInView={{opacity:1,y:0}} viewport={{ once: true }} initial={{opacity:0,y:100}}  transition={{ duration: 0.6,delay:0.2 }} >
+          <div  className=' mx-[4vw] items-center flex flex-row font-Inter text-[3.6vw] sm:text-[3vw] md:text-[1.8vw] lg:text-[1.4vw] xl:text-[1.2vw]  tracking-tighter font-normal '>
+            <h1 className=' basis-2/4 '>{value.company}</h1>
+            <h2 className='basis-2/4 text-right md:text-left '>{value.position}</h2>
+            <h2 className='basis-1/4 hidden md:block  '>{value.date}</h2>
           </div>
+          <div className='  font-Inter flex flex-col  md:flex-row  mx-[4vw]  mt-[10vh] mb-[15vh]  md:px-[3vw]  '>
+            <h1 className='basis-1/4 text-[4vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw]   '>{`(00${key+1})`}</h1>
+            <p className='basis-3/4 lg:basis-2/3 text-[5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2.5vw]  lg:leading-[3vw] leading-[7vw] sm:leading-[4vw]   py-[2vw] md:py-0  tracking-normal font-bold  '>{value.smallDesc}</p>
+          </div>
+            </motion.div>
+
 
          
           
@@ -47,7 +48,7 @@ function WorkCard() {
       })
     }
     
-    </motion.div>   
+    
 
    
 
