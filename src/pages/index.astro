@@ -7,11 +7,16 @@ import WorkCard from '../components/WorkCard';
 import Home from '../components/Home'
 ---
 <style>
-
+@font-face {
+    font-family: 'Outward';
+    src: url('../fonts/outward-block-webfont.eot');
+    src: url('../fonts/webfonts/outward-block-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 </style>
 <Layout>
-
     <Home client:visible/>
     <WorkCard client:visible/>
 
