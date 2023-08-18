@@ -8,7 +8,7 @@ function WorkCard() {
   
   return (
 <>
-<div className=" mx-[1vw] mt-[25vh]">
+<div className=" mx-[1vw] mt-[20vh]">
   <div className='overflow-hidden font-Inter text-[3vw] sm:text-[2.4vw] md:text-[2vw] lg:text-[1.4vw]  mx-[4vw]'>
     <motion.div initial={{ y: '100%' }} whileInView={{ y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className=" flex flex-row justify-between">
             <div className="basis-1/2 flex flex-row ">

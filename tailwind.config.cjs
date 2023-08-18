@@ -6,8 +6,7 @@ module.exports = {
 			fontFamily:{
 				
 				'Pop':['Poppins', 'sans-serif'],
-				
-				
+				'Outward':'Outward',
 				'Right':['Righteous', 'cursive'],
 				'Inter':['Inter', 'sans-serif']
 			}

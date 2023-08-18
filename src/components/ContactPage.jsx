@@ -4,38 +4,18 @@ import { useScroll,useTransform } from 'framer-motion'
 import searchUp from '../images/SearchDown.svg'
 
 function ContactPage() {
-    const[show,setShow]=useState(false)
-    const { scrollYProgress } = useScroll()
-const scale = useTransform(scrollYProgress, [0, 1],[0,1]);
-    const [yourName,setYourName]=useState('')
-    const [emailId,setEmailId]=useState('')
-    const [message,setMessage]=useState('')
 
-    const submit=(e)=>{
-        e.preventDefault();
-
-        const templateParams={
-            from_name:yourName,
-            from_email:emailId,
-            from_message:message
-        }
-
-        emailjs.send('<YOUR_SERVICEID>','<TEMPLATE_ID>',templateParams,'<YOUR_PUBLIC_KEY>')
-        .then(function(res){
-            console.log('Success!',res.status,res.text)
-        },function(err){
-            console.log("Failed...",err)
-        }
-        )
-    }
+    
   return (<>
   
     <div className=' mx-[2vw] mt-[25vh] mb-[5vh] font-Inter'>
-        <h1 className='lg:text-[2.6vw]   text-[5vw] font-semibold  tracking-tighter text-center lg:leading-[4vh] leading-[3.5vh] mb-[20vh]'>Eager to Embrace New Opportunities!<br/> Let's Collaborate for Success!</h1>
+        <h1 className='lg:text-[2.6vw] md:text-[3vw]   text-[4vw] font-semibold  tracking-tight text-center 2xl:leading-[5vh] xl:leading-[4vh] lg:leading-[3vh]  md:leading-[2.5vh] leading-[2.2vh] mb-[20vh]'>Eager to Embrace New Opportunities!<br/> Let's Collaborate for Success!</h1>
         <div className=' flex flex-row justify-between items-center text-[4vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.4vw]'>
             <div>
+            <a target='_blank' href="https://twitter.com/Iamtripathi25" className='mx-[1vw] py-[0.5vh]   font-semibold '>Twitter</a>
             <a target='_blank' href="https://www.linkedin.com/in/aman-tripathi-6ba35a191/" className='mx-[1vw] py-[0.5vh]   font-semibold'>LinkedIn</a>
             <a target='_blank' href="https://github.com/Tripathiaman2511" className='mx-[1vw] py-[0.5vh]   font-semibold '>Github</a>
+            
             </div>
             <div className=''>
             <a href="#" className='flex flex-row mx-[1vw] py-[0.5vh] hover:text-slate-500 '>
