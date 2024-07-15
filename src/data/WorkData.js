@@ -1,11 +1,5 @@
 export const WorkData=[
-    {
-        'position':'Java Developer',
-        'company':'Tata Consultancy Services',
-        'smallDesc':'Developed and deployed robust scheduling and listener mechanisms within a Java-based REST API for a government initiative, leveraging Hibernate for efficient data management, resulting in a 30% increase in data processing efficiency and enhanced system responsiveness.',
-        'date':'FEB 2024'
-        
-    },
+   
     {
         'position':'UI Designer',
         'company':'Exposys Data Labs',
@@ -28,6 +22,13 @@ export const WorkData=[
         'date':'MAR 2023'
     
     },
+     {
+        'position':'Java Developer',
+        'company':'Tata Consultancy Services',
+        'smallDesc':'Developed and deployed robust scheduling and listener mechanisms within a Java-based REST API for a government initiative, leveraging Hibernate for efficient data management, resulting in a 30% increase in data processing efficiency and enhanced system responsiveness.',
+        'date':'FEB 2024'
+        
+    }
     
 
 ]
