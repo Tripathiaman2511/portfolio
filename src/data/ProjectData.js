@@ -1,5 +1,12 @@
 export const ProjectData=[
     {
+        'projectName':"Multi-Agent LLM System",
+        'type':"python",
+        'githubLink':"https://github.com/Tripathiaman2511/multi-agent-app",
+        'date':'MAY 2025',
+        'imageLink':''
+    },
+    {
         'projectName':"DLPFS Server",
         'type':"NodeJs Backend",
         'githubLink':"https://github.com/Tripathiaman2511/DLPFS-server",
